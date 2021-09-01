@@ -2,8 +2,12 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "husky": "^7.0.2",
     "jest": "^27.1.0",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.1.2"
   },
   "dependencies": {
     "eslint": "^7.32.0",
@@ -13,5 +17,16 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint --ext .js packages/**/*.js  --no-error-on-unmatched-pattern --fix "
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "npx --no-install commitlint --edit $1"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint --fix"
+    ]
   }
 }
