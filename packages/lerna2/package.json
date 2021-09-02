@@ -1,6 +1,6 @@
 {
   "name": "lerna2",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "changqing <qing.chang@eeoa.com>",
   "homepage": "",
@@ -22,9 +22,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@lerna2/cli": "^0.0.0",
-    "@lerna2/create": "^0.0.0",
-    "@lerna2/init": "^0.0.0",
+    "@lerna2/cli": "^0.0.1",
+    "@lerna2/create": "^0.0.1",
+    "@lerna2/init": "^0.0.1",
     "eslint": "^7.32.0",
     "fs-extra": "^10.0.0",
     "jest": "^27.1.0"
